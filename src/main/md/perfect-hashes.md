@@ -43,11 +43,11 @@ This is clearly not very likely to succeed. To work out the exact probability of
 
 The BMZ algorithm takes a pretty interesting approach. To build the perfect hash in _O(m)_ time we can only store an _O(m)_ amount of state. We want to make the constant as big as possible (which uses a lot of memory - not ideal), so we could either store really big state objects, or make several queries smaller state objects (which BMZ does). The problem them becomes: (1) how do you work out what queries to make, and more importantly (2) how do you build up the state such that each key makes result in a different hash number. 
 
-BMZ queries the state twice to get the data it needs to return the hash number, and solves the first step by a logical extension of the first draft above: instead of having one seed, have two! The Equivalence below takes the shared state _g_ (an array whose length is *not* _m_), queries it twice with the two different seeds, and combines them by simply summing the two states it finds: 
+BMZ queries the state twice to get the data it needs to return the hash number, and solves the first step by a logical extension of the first draft above: instead of having one seed, have two! The Equivalence below takes the shared state _g_ (an array whose length is *not* _m_), queries it twice with the two different seeds, and combines them by simply summing the two states it finds. I've made the Equivalence Serializable so once you've done the hard work of generating it you can persist it somewhere and load it in other applications. 
 
 ~~~~
 @Returned Equivalence@ += 
-private static final class BMZ<E> extends Equivalence<E> {
+private static final class BMZ<E> extends Equivalence<E> implements Serializable {
     private final int seed1;
     private final int seed2;
     private final int[] g;
@@ -318,6 +318,7 @@ And some final Java boilerplate:
 
 ~~~~
 @Imports@ += 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.Collection;
