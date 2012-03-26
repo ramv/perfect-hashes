@@ -10,9 +10,9 @@
 	<description>A Perfect Hash Function Generator in Java</description>
 	<url>http://remis-thoughts.blogspot.com</url>
 	<scm>
-		<url>https://java-bit-arrays.googlecode.com/svn/tags/perfect-hashes-1.0</url>
-		<connection>scm:svn:http://java-bit-arrays.googlecode.com/svn/tags/perfect-hashes-1.0</connection>
-		<developerConnection>scm:svn:https://java-bit-arrays.googlecode.com/svn/tags/perfect-hashes-1.0</developerConnection>
+		<url>https://perfect-hashes.googlecode.com/svn/tags/perfect-hashes-1.0</url>
+		<connection>scm:svn:http://perfect-hashes.googlecode.com/svn/tags/perfect-hashes-1.0</connection>
+		<developerConnection>scm:svn:https://perfect-hashes.googlecode.com/svn/tags/perfect-hashes-1.0</developerConnection>
 	</scm>
 	<licenses>
 		<license>
