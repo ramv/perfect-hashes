@@ -3,16 +3,16 @@
 
 	<groupId>com.googlecode.perfect-hashes</groupId>
 	<artifactId>perfect-hashes</artifactId>
-	<version>1.0</version>
+	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>perfect-hashes</name>
 	<description>A Perfect Hash Function Generator in Java</description>
 	<url>http://remis-thoughts.blogspot.com</url>
 	<scm>
-		<url>https://perfect-hashes.googlecode.com/svn/tags/perfect-hashes-1.0</url>
-		<connection>scm:svn:http://perfect-hashes.googlecode.com/svn/tags/perfect-hashes-1.0</connection>
-		<developerConnection>scm:svn:https://perfect-hashes.googlecode.com/svn/tags/perfect-hashes-1.0</developerConnection>
+		<url>https://perfect-hashes.googlecode.com/svn/trunk</url>
+		<connection>scm:svn:http://perfect-hashes.googlecode.com/svn/trunk</connection>
+		<developerConnection>scm:svn:https://perfect-hashes.googlecode.com/svn/trunk</developerConnection>
 	</scm>
 	<licenses>
 		<license>
