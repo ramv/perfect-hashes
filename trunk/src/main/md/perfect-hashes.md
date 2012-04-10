@@ -63,7 +63,7 @@ private static final class BMZ<E> extends Equivalence<E> implements Serializable
     }
 }
 /** we'll use this elsewhere, so let's extract this logic into its own method */
-private static int[] getTwoHashes(Object t, int seed1, int seed2, int n) {
+@VisibleForTesting static int[] getTwoHashes(Object t, int seed1, int seed2, int n) {
     int hc = t.hashCode(); // don't call twice - premature optimization?
     int h1 = (hc ^ seed1) % n;
     int h2 = (hc ^ seed2) % n;
@@ -325,6 +325,7 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
+import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Equivalence;
 @Give Up@ +=
 throw new IllegalStateException("giving up - perfect hashcode too hard to find!");
